@@ -313,6 +313,22 @@ h1 {
 
     .nav-wrapper {
         height: 45px;
+        padding: 0.3rem 0.8rem;
+        justify-content: space-between;
+    }
+
+    .nav-brand {
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .toggle-btn {
+        position: absolute;
+        left: 0.5rem;
     }
 
     .main-content {
@@ -354,13 +370,24 @@ h1 {
         padding: 0.2rem 0.5rem;
     }
 
+    .nav-brand {
+        justify-content: center;
+        margin: 0 auto;
+    }
+
     .nav-brand span {
-        font-size: 0.9rem;
+        font-size: 1rem;
+    }
+
+    .nav-icon {
+        width: 24px;
+        height: 24px;
     }
 
     .toggle-btn {
         width: 32px;
         height: 32px;
+        left: 0.3rem;
     }
 
     .toggle-btn i {

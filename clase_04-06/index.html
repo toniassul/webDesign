@@ -210,6 +210,7 @@
         sidebar.classList.add('collapsed');
         mainContent.classList.add('expanded');
         sidebarToggle.classList.remove('active');
+        document.body.style.overflow = ''; // Allow scrolling
     };
 
     // Function to open sidebar
@@ -217,6 +218,9 @@
         sidebar.classList.remove('collapsed');
         mainContent.classList.remove('expanded');
         sidebarToggle.classList.add('active');
+        if (window.innerWidth <= 968) {
+            document.body.style.overflow = 'hidden'; // Prevent scrolling on mobile
+        }
     };
 
     // Toggle sidebar when clicking the button
@@ -229,12 +233,12 @@
         }
     });
 
-    // Handle clicks outside the sidebar
+    // Handle clicks outside the sidebar on mobile
     document.addEventListener('click', (e) => {
-        if (!sidebar.contains(e.target) && 
+        if (window.innerWidth <= 968 && 
+            !sidebar.contains(e.target) && 
             !sidebarToggle.contains(e.target) && 
-            !sidebar.classList.contains('collapsed') && 
-            window.innerWidth <= 968) {
+            !sidebar.classList.contains('collapsed')) {
             closeSidebar();
         }
     });
@@ -249,13 +253,18 @@
         });
     });
 
-    // Initialize sidebar state based on screen size
+    // Handle resize events
+    let resizeTimer;
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 968) {
-            openSidebar();
-        } else {
-            closeSidebar();
-        }
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            if (window.innerWidth > 968) {
+                openSidebar();
+                document.body.style.overflow = ''; // Always allow scrolling on desktop
+            } else {
+                closeSidebar();
+            }
+        }, 250); // Debounce resize events
     });
 
     // Set initial state

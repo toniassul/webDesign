@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Desing by Valderrama</title>
+    <link rel="stylesheet" href="resources.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Add theme-color for mobile browsers -->
+    <meta name="theme-color" content="#3498db">
+    <!-- Add favicon -->
+    <link rel="icon" type="image/gif" href="img/logo-abrirllave.gif">
+</head>
+<body>
+    <!-- Navigation Toggle Button -->
+    <button id="navToggle" class="nav-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h3>Exercises</h3>
+            <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="ejercicio1.html"><i class="fas fa-file-code"></i> Exercise 1</a>
+            <a href="ejercicio2.html"><i class="fas fa-file-code"></i> Exercise 2</a>
+            <a href="ejercicio3.html"><i class="fas fa-file-code"></i> Exercise 3</a>
+            <a href="ejercicio4.html"><i class="fas fa-file-code"></i> Exercise 4</a>
+            <a href="ejercicio5.html"><i class="fas fa-file-code"></i> Exercise 5</a>
+            <a href="ejercicio6.html"><i class="fas fa-file-code"></i> Exercise 6</a>
+            <a href="ejercicio7.html"><i class="fas fa-file-code"></i> Exercise 7</a>
+            <a href="ejercicio8.html"><i class="fas fa-file-code"></i> Exercise 8</a>
+            <a href="ejercicio9.html"><i class="fas fa-file-code"></i> Exercise 9</a>
+            <a href="ejercicio10.html"><i class="fas fa-file-code"></i> Exercise 10</a>
+            <a href="ejercicio11.html"><i class="fas fa-file-code"></i> Exercise 11</a>
+            <a href="ejercicio12.html"><i class="fas fa-file-code"></i> Exercise 12</a>
+            <a href="ejercicio13.html"><i class="fas fa-file-code"></i> Exercise 13</a>
+            <a href="ejercicio14.html"><i class="fas fa-file-code"></i> Exercise 14</a>
+            <a href="ejercicioPropuesto1.html" class="special"><i class="fas fa-star"></i> Proposed Exercise</a>
+        </nav>
+    </aside>
+
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-code"></i> Web Design by Valderrama</h1>
+            <img src="img/queen.jpg" alt="HTML Tutorial" class="header-image">
+        </header>
+
+        <!-- Grid Navigation -->
+        <nav class="exercise-grid">
+            <a href="ejercicio1.html" class="exercise-card">
+                <i class="fas fa-file-code"></i>
+                <span>Exercise 1</span>
+            </a>
+            <a href="ejercicio2.html" class="exercise-card">
+                <i class="fas fa-file-code"></i>
+                <span>Exercise 2</span>
+            </a>
+            <a href="ejercicio3.html" class="exercise-card">
+                <i class="fas fa-file-code"></i>
+                <span>Exercise 3</span>
+            </a>
+            <a href="ejercicio4.html" class="exercise-card">
+                <i class="fas fa-file-code"></i>
+                <span>Exercise 4</span>
+            </a>
+            <a href="ejercicio5.html" class="exercise-card">
+                <i class="fas fa-file-code"></i>
+                <span>Exercise 5</span>
+            </a>
+            <a href="ejercicio6.html" class="exercise-card">
+                <i class="fas fa-file-code"></i>
+                <span>Exercise 6</span>
+            </a>
+            <a href="ejercicio7.html" class="exercise-card">
+                <i class="fas fa-file-code"></i>
+                <span>Exercise 7</span>
+            </a>
+            <a href="ejercicio8.html" class="exercise-card">
+                <i class="fas fa-file-code"></i>
+                <span>Exercise 8</span>
+            </a>
+            <a href="ejercicio9.html" class="exercise-card">
+                <i class="fas fa-file-code"></i>
+                <span>Exercise 9</span>
+            </a>
+            <a href="ejercicio10.html" class="exercise-card">
+                <i class="fas fa-file-code"></i>
+                <span>Exercise 10</span>
+            </a>
+            <a href="ejercicio11.html" class="exercise-card">
+                <i class="fas fa-file-code"></i>
+                <span>Exercise 11</span>
+            </a>
+            <a href="ejercicio12.html" class="exercise-card">
+                <i class="fas fa-file-code"></i>
+                <span>Exercise 12</span>
+            </a>
+            <a href="ejercicio13.html" class="exercise-card">
+                <i class="fas fa-file-code"></i>
+                <span>Exercise 13</span>
+            </a>
+            <a href="ejercicio14.html" class="exercise-card">
+                <i class="fas fa-file-code"></i>
+                <span>Exercise 14</span>
+            </a>
+            <a href="ejercicioPropuesto1.html" class="exercise-card special">
+                <i class="fas fa-star"></i>
+                <span>Proposed Exercise 1</span>
+            </a>
+        </nav>
+
+        <footer>
+            <p><strong>Created by George Anthony Ascue Sulca</strong></p>
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Simple JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('navToggle');
+            const sidebar = document.querySelector('.sidebar');
+            const closeSidebar = document.querySelector('.close-sidebar');
+
+            navToggle.addEventListener('click', () => {
+                sidebar.classList.add('active');
+            });
+
+            closeSidebar.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+            });
+
+            // Close sidebar when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!sidebar.contains(e.target) && !navToggle.contains(e.target)) {
+                    sidebar.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

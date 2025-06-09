@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla países</title>
+    <link rel="stylesheet" href="resources.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#3498db">
+</head>
+<body>
+    <!-- Navigation Toggle Button -->
+    <button id="navToggle" class="nav-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h3>Exercises</h3>
+            <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="ejercicio1.html" class="active"><i class="fas fa-file-code"></i> Exercise 1</a>
+            <a href="ejercicio2.html"><i class="fas fa-file-code"></i> Exercise 2</a>
+            <a href="ejercicio3.html"><i class="fas fa-file-code"></i> Exercise 3</a>
+            <a href="ejercicio4.html"><i class="fas fa-file-code"></i> Exercise 4</a>
+            <a href="ejercicio5.html"><i class="fas fa-file-code"></i> Exercise 5</a>
+            <a href="ejercicio6.html"><i class="fas fa-file-code"></i> Exercise 6</a>
+            <a href="ejercicio7.html"><i class="fas fa-file-code"></i> Exercise 7</a>
+            <a href="ejercicio8.html"><i class="fas fa-file-code"></i> Exercise 8</a>
+            <a href="ejercicio9.html"><i class="fas fa-file-code"></i> Exercise 9</a>
+            <a href="ejercicio10.html"><i class="fas fa-file-code"></i> Exercise 10</a>
+            <a href="ejercicio11.html"><i class="fas fa-file-code"></i> Exercise 11</a>
+            <a href="ejercicio12.html"><i class="fas fa-file-code"></i> Exercise 12</a>
+            <a href="ejercicio13.html"><i class="fas fa-file-code"></i> Exercise 13</a>
+            <a href="ejercicio14.html"><i class="fas fa-file-code"></i> Exercise 14</a>
+            <a href="ejercicioPropuesto1.html" class="special"><i class="fas fa-star"></i> Proposed Exercise</a>
+        </nav>
+    </aside>
+
+    <div class="container">
+        <table>
+            <tr>
+                <td>China</td><td>1300 millones</td>
+            </tr>
+            <tr>
+                <td>India</td><td>1080 millones</td>
+            </tr>
+            <tr>
+                <td>Estados Unidos</td><td>295 millones</td>
+            </tr>
+        </table>
+        <a href="index.html" class="back-to-home"><i class="fas fa-home"></i> Back to Home</a>
+    </div>
+
+    <!-- JavaScript for Sidebar -->
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.add('active');
+        });
+
+        document.querySelector('.close-sidebar').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.remove('active');
+        });
+    </script>
+</body>
+</html>
+
+
+

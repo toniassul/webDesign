@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="George Anthony Ascue Sulca">
+    <meta name="description" content="Ejercicio de tablas HTML">
+    <meta name="keywords" content="tablas, HTML, ejercicio, evaluación, horario">
+    <title>Mis primeras tablas</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            border-collapse: separate;
+            border-style: solid;
+        }
+        th, td {
+            border: 2px solid #888;
+            padding: 6px 12px;
+            text-align: center;
+        }
+        .aprobados {
+            background-color: #00b050;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+
+        }
+        .suspendidos {
+            background-color: red;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+        .recreo {
+            background-color: #92d050;
+            font-weight: bold;
+        }
+        .informatica {
+            background-color: #ffc000;
+        }
+        .cabecera {
+            font-weight: bold;
+            text-align: center;
+        }
+        .lengua {
+            background-color: #e0480c8e;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+        <div style="text-align:center; font-weight:bold;">TABLA DE EVALUACIONES</div>
+    <br>
+    <ul type=none>
+        <li>
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2"></th>
+                        <th colspan="2">1ª Eval</th>
+                        <th colspan="2">2ª Eval</th>
+                        <th colspan="2">3ª Eval</th>
+                    </tr>
+                    <tr>
+                        <th class="aprobados">Aprobados</th>
+                        <th class="suspendidos">Suspendidos</th>
+                        <th class="aprobados">Aprobados</th>
+                        <th class="suspendidos">Suspendidos</th>
+                        <th class="aprobados">Aprobados</th>
+                        <th class="suspendidos">Suspendidos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Informática</td>
+                        <td>20</td>
+                        <td>2</td>
+                        <td>17</td>
+                        <td>5</td>
+                        <td>22</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Matemáticas</td>
+                        <td>10</td>
+                        <td>7</td>
+                        <td>12</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <div style="text-align:center; font-weight:bold;">HORARIO SEMESTRAL</div>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horas</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8:00-9:00</td>
+                        <td class="suspendidos">Matemáticas</td>
+                        <td>Lengua</td>
+                        <td>Música</td>
+                        <td></td>
+                        <td class="suspendidos">Matemáticas</td>
+                    </tr>
+                    <tr>
+                        <td>9:00-10:00</td>
+                        <td class="suspendidos">Matemáticas</td>
+                        <td>Inglés</td>
+                        <td>Música</td>
+                        <td class="suspendidos">E.Física</td>
+                        <td>Matemáticas</td>
+                    </tr>
+                    <tr>
+                        <td>10:00-10:30</td>
+                        <td colspan="5" class="recreo">Recreo</td>
+                    </tr>
+                    <tr>
+                        <td>10:30-11:30</td>
+                        <td class="suspendidos">E.Física</td>
+                        <td>Valenciano</td>
+                        <td class="lengua">Lengua</td>
+                        <td class="informatica">Informática</td>
+                        <td>Inglés</td>
+                    </tr>
+                    <tr>
+                        <td>12:30-13:30</td>
+                        <td>Música</td>
+                        <td class="suspendidos">E.Física</td>
+                        <td class="lengua">Lengua</td>
+                        <td class="suspendidos">Matematicas</td>
+                        <td class="informatica">Informática</td>
+                    </tr>
+                    <tr>
+                        <td>13:30-14:30</td>
+                        <td></td>
+                        <td class="informatica">Informática</td>
+                        <td></td>
+                        <td class="suspendidos">Matemáticas</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+</body>
+</html>

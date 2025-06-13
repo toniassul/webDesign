@@ -1,0 +1,9 @@
+#cabecera {
+    font-family: "Times New Roman", serif;
+    font-size: 30px;
+    text-align: center;
+    color: #0000ff;
+    background-color: #bbbbbb;
+    padding: 20px;
+    margin-bottom: 15px;
+}

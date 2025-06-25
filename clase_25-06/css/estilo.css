@@ -1,0 +1,47 @@
+
+.tarjeta {
+    border: 3px double #0099cc;
+    padding: 20px;
+    text-align: center;
+    margin: 25px auto;
+    background-color: #e6f7ff;
+    width: 330px;
+    box-shadow: 0px 0px 12px rgba(0, 255, 0, 1 );
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;}
+
+
+h3 {
+    color: rgb(255, 255, 255);
+    font-family: "UnifrakturMaguntia";
+    font-size: 20px;
+    text-shadow: 0px 0px 12px rgb(0, 0, 0);
+}
+p {
+    color: #ffffff;
+    font-family: "Gwendolyn-Regular";
+    font-size: 26px;
+    text-shadow: 0px 0px 4px rgb(0, 0, 0);
+}
+
+#fuente_nueva {
+    color: #ffffff;
+    font-family: "Notable", sans-serif;
+    font-size: 14px;
+}
+
+#contacto {
+    color: #ffffff;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-size: 20px;
+}
+@font-face {
+    font-family: Gwendolyn-Regular ;
+    src: url(/Gwendolyn/Gwendolyn-Bold.ttf) format("truetype");
+}
+
+.unifrakturmaguntia-regular {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

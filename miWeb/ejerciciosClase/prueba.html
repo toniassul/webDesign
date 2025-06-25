@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Hospital Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#patients">Patients</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#appointments">Appointments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Add 'content-section' class and 'active' class for the default view -->
+        <section id="dashboard" class="content-section active">
+            <h2>Dashboard</h2>
+            <p>Welcome to the hospital management system. Use the navigation menu to manage assignments.</p>
+        </section>
+
+        <section id="patients" class="content-section">
+            <h2>Patients</h2>
+            <p>Manage patient records here.</p>
+            <ul id="patient-list">
+                <li>John Doe - Room 101</li>
+                <li>Jane Smith - Room 102</li>
+                <li>Robert Johnson - Room 103</li>
+            </ul>
+            <button id="add-patient-btn">Add New Patient</button>
+            <!-- More patient management content could go here, like a form -->
+
+        </section>
+
+        <section id="doctors" class="content-section">
+            <h2>Doctors</h2>
+            <p>Manage doctor records here.</p>
+            <!-- Add doctor management content -->
+        </section>
+
+        <section id="appointments" class="content-section">
+            <h2>Appointments</h2>
+            <p>Manage appointments here.</p>
+            <!-- Add appointment management content -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hospital Management System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all navigation links and content sections
+            const navLinks = document.querySelectorAll('header nav ul li a');
+            const sections = document.querySelectorAll('.content-section');
+
+            // Function to show a specific section and hide others
+            function showSection(sectionId) {
+                sections.forEach(section => {
+                    if (section.id === sectionId) {
+                        section.classList.add('active'); // Show the target section
+                    } else {
+                        section.classList.remove('active'); // Hide other sections
+                    }
+                });
+            }
+
+            // --- Specific Section Logic ---
+
+            // Example: Add functionality to the "Add New Patient" button
+            const addPatientButton = document.getElementById('add-patient-btn');
+            if (addPatientButton) { // Check if the button exists on the currently visible section
+                addPatientButton.addEventListener('click', () => {
+                    console.log('Add New Patient button clicked!');
+                    alert('Simulating adding a new patient. Check the console!');
+                    // In a real app, this would likely open a form or send data to a backend.
+                });
+            }
+
+            // Add click event listeners to navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent default anchor jump
+
+                    // Get the target section ID from the link's href (e.g., '#patients' -> 'patients')
+                    const targetId = link.getAttribute('href').substring(1);
+
+                    // Show the corresponding section
+                    showSection(targetId);
+
+                    // Re-attach or enable listeners for elements within the newly shown section if needed
+                    // For this simple example, the button listener is added once on load,
+                    // but for dynamically loaded content, you might need to re-attach listeners here.
+                    if (targetId === 'patients') {
+                        // Example: If the button listener needed re-attaching (not strictly necessary here)
+                        // const freshButton = document.getElementById('add-patient-btn');
+                        // freshButton.addEventListener('click', () => { ... });
+                    }
+                });
+            });
+
+            // Optional: Ensure the dashboard is shown by default (redundant if HTML class is set, but safe)
+            // showSection('dashboard');
+        });
+    </script>
+</body>
+</html>

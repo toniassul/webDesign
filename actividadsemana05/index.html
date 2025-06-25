@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Semana 05 - Enlaces</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateX(-5px);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            color: white;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .pages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .page-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .page-card:hover {
+            transform: translateY(-5px) rotate(1deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .page-link {
+            display: block;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            font-size: 1.1em;
+            position: relative;
+            z-index: 1;
+        }
+        .page-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #6366f1, #a855f7);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.3s ease;
+        }
+        .page-card:hover .page-link {
+            color: white;
+        }
+        .page-card:hover .page-link::before {
+            opacity: 1;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            .pages-grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">← Volver al índice principal</a>
+        <header>
+            <h1>Actividad Semana 05</h1>
+            <div class="subtitle">Enlaces HTML con Estilos CSS</div>
+        </header>
+        <div class="pages-grid">
+            <div class="page-card">
+                <a href="pagina1.html" class="page-link">Página 1</a>
+            </div>
+            <div class="page-card">
+                <a href="pagina2.html" class="page-link">Página 2</a>
+            </div>
+            <div class="page-card">
+                <a href="pagina3.html" class="page-link">Página 3</a>
+            </div>
+            <div class="page-card">
+                <a href="pagina4.html" class="page-link">Página 4</a>
+            </div>
+            <div class="page-card">
+                <a href="pagina5.html" class="page-link">Página 5</a>
+            </div>
+            <div class="page-card">
+                <a href="pagina6.html" class="page-link">Página 6</a>
+            </div>
+            <div class="page-card">
+                <a href="pagina7.html" class="page-link">Página 7</a>
+            </div>
+            <div class="page-card">
+                <a href="pagina8.html" class="page-link">Página 8</a>
+            </div>
+            <div class="page-card">
+                <a href="pagina9.html" class="page-link">Página 9</a>
+            </div>
+        </div>
+        <footer style="margin-top: 3rem; text-align: center; color: white; font-size: 0.9em;">
+            <p>Design By: George Anthony Ascue Sulca</p>
+        </footer>
+    </div>
+</body>
+</html>

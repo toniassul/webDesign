@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Semana 06 - Tablas HTML</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #4f46e5 0%, #7e22ce 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateX(-5px);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            color: white;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .tables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .table-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .table-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .table-link {
+            display: block;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        .table-card:hover .table-link {
+            border-left-color: #4f46e5;
+            color: #4f46e5;
+            padding-left: 2rem;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            .tables-grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">← Volver al índice principal</a>
+        <header>
+            <h1>Actividad Semana 06</h1>
+            <div class="subtitle">Tablas en HTML</div>
+        </header>
+        <div class="tables-grid">
+            <div class="table-card">
+                <a href="1tabla_basica.html" class="table-link">Tabla Básica</a>
+            </div>
+            <div class="table-card">
+                <a href="2tabla_paises.html" class="table-link">Tabla Países</a>
+            </div>
+            <div class="table-card">
+                <a href="3tabla_paisesconencabezado.html" class="table-link">Tabla con Encabezado</a>
+            </div>
+            <div class="table-card">
+                <a href="4tabla_paisescontitulo.html" class="table-link">Tabla con Título</a>
+            </div>
+            <div class="table-card">
+                <a href="5tabla_climaproximosdias.html" class="table-link">Tabla Clima</a>
+            </div>
+            <div class="table-card">
+                <a href="6tabla_con_imagenes.html" class="table-link">Tabla con Imágenes</a>
+            </div>
+            <div class="table-card">
+                <a href="7tabla_ combinaciondeceldas.html" class="table-link">Combinación de Celdas</a>
+            </div>
+            <div class="table-card">
+                <a href="8tabla_avanzada.html" class="table-link">Tabla Avanzada</a>
+            </div>
+            <div class="table-card">
+                <a href="9tabla_con_bordes.html" class="table-link">Tabla con Bordes</a>
+            </div>
+            <div class="table-card">
+                <a href="10tabla_con_celdas_separadas.html" class="table-link">Celdas Separadas</a>
+            </div>
+            <div class="table-card">
+                <a href="11tabla_con_borde_junto.html" class="table-link">Bordes Unidos</a>
+            </div>
+            <div class="table-card">
+                <a href="12tabla_propiedad_width.html" class="table-link">Propiedad Width</a>
+            </div>
+            <div class="table-card">
+                <a href="13tabla_avanzadaconcss.html" class="table-link">Tabla CSS Avanzada</a>
+            </div>
+            <div class="table-card">
+                <a href="14queen.html" class="table-link">Queen</a>
+            </div>
+        </div>
+        <footer style="margin-top: 3rem; text-align: center; color: white; font-size: 0.9em;">
+            <p>Design By: George Anthony Ascue Sulca</p>
+        </footer>
+    </div>
+</body>
+</html>

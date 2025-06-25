@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Semana 03 - Ejercicios</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateX(-5px);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5rem;
+        }
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .exercise-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .exercise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .exercise-link {
+            display: block;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: #2d3748;
+            font-weight: 500;
+            font-size: 1.1em;
+            background: linear-gradient(to right, transparent 50%, #3b82f6 50%);
+            background-size: 200% 100%;
+            background-position: left bottom;
+            transition: all 0.3s ease;
+        }
+        .exercise-link:hover {
+            background-position: right bottom;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            .exercise-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="../index.html" class="back-link">← Volver al índice principal</a>
+        <header>
+            <h1>Actividad Semana 03</h1>
+        </header>
+        <div class="exercise-grid">
+            <div class="exercise-card">
+                <a href="ejercicio001.html" class="exercise-link">Ejercicio 001</a>
+            </div>
+            <div class="exercise-card">
+                <a href="ejercicio002.html" class="exercise-link">Ejercicio 002</a>
+            </div>
+            <div class="exercise-card">
+                <a href="ejercicio003.html" class="exercise-link">Ejercicio 003</a>
+            </div>
+            <div class="exercise-card">
+                <a href="ejercicio004.html" class="exercise-link">Ejercicio 004</a>
+            </div>
+            <div class="exercise-card">
+                <a href="ejercicio005.html" class="exercise-link">Ejercicio 005</a>
+            </div>
+        </div>
+        <footer style="margin-top: 3rem; text-align: center; color: white; font-size: 0.9em;">
+            <p>Design By: George Anthony Ascue Sulca</p>
+        </footer>
+    </div>
+</body>
+</html>

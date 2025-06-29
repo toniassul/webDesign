@@ -1,0 +1,96 @@
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.tabla-precios-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabla-precios {
+    border-collapse: separate;
+    border-spacing: 2px;
+    min-width: 600px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+    border-radius: 14px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.tabla-precios th,
+.tabla-precios td {
+    text-align: center;
+    padding: 22px 0 22px 0;
+    font-size: 1.1em;
+    border-bottom: 1px solid #e0e0e0;
+    background: #f7f7f7;
+    transition: background 0.2s;
+}
+
+.tabla-precios th {
+    background: #ededed;
+    color: #444;
+    font-size: 1.18em;
+    font-weight: bold;
+    border-bottom: 1.5px solid #d0d0d0;
+}
+
+.tabla-precios td img {
+    width: 26px;
+    height: 26px;
+}
+
+.tabla-precios tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-precios .precio {
+    font-size: 1.5em;
+    font-weight: bold;
+    background: #ededed;
+    color: #222;
+    border-bottom: none;
+}
+
+/* Enterprise highlight */
+.tabla-precios th.col-enterprise,
+.tabla-precios td.col-enterprise {
+    background: #e8f5c8 !important;
+    color: #2e5d1a;
+}
+.tabla-precios .precio.col-enterprise {
+    background: #e8f5c8 !important;
+    color: #2e5d1a;
+}
+
+/* Bordes redondeados */
+.tabla-precios th:first-child {
+    border-top-left-radius: 14px;
+}
+.tabla-precios th:last-child {
+    border-top-right-radius: 14px;
+}
+.tabla-precios tr:last-child td:first-child {
+    border-bottom-left-radius: 14px;
+}
+.tabla-precios tr:last-child td:last-child {
+    border-bottom-right-radius: 14px;
+}
+
+/* Quitar estilos viejos */
+.tabla-destacada, .pricing-container, .pricing-column, .enterprise, .standard, .professional, .price {
+    all: unset;
+}

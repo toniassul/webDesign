@@ -1,0 +1,16 @@
+#container {
+    margin: 10px 140px;
+    border: #4CAF50 solid 2px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+.boton {
+    width: 100px;
+    height: 45px;
+    background-color: #06830a;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}

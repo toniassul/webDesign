@@ -1,0 +1,46 @@
+        /* Estilos generales para el cuerpo de la página */
+        body {
+            font-family: Arial, sans-serif; /* Tipo de letra legible */
+            background-color: #B2536B; /* Color de fondo similar al de la imagen */
+            margin: 0; /* Elimina el margen predeterminado del navegador */
+            padding: 20px; /* Un poco de espacio alrededor del contenido */
+            color: #333; /* Color de texto predeterminado */
+        }
+
+        /* Estilos para el encabezado */
+        h1 {
+            color: #333; /* Un color oscuro para el texto del título */
+            font-size: 24px; /* Tamaño de la fuente del título */
+            margin-bottom: 20px; /* Espacio debajo del título */
+        }
+
+        /* Estilos para la barra de navegación (el contenedor de los botones) */
+        .navbar {
+            list-style: none; /* Elimina los puntos de la lista */
+            padding: 0; /* Elimina el padding predeterminado de la lista */
+            margin: 0; /* Elimina el margen predeterminado de la lista */
+            width: 150px; /* Ancho fijo para la barra de navegación */
+        }
+
+        /* Estilos para cada elemento de la lista (cada "botón") */
+        .navbar li {
+            margin-bottom: 10px; /* Espacio entre cada botón */
+        }
+
+        /* Estilos para los enlaces (los botones en sí) */
+        .boton {
+            display: block; /* Hace que el enlace ocupe todo el ancho del contenedor */
+            width: 150px;
+            box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.7); /* Sombra para dar profundidad */
+            background-color: #7A3B54; /* Color de fondo de los botones */
+            color: white; /* Color del texto de los botones */
+            text-decoration: none; /* Elimina el subrayado del texto */
+            padding: 8px; /* Espacio interno para que los botones sean más grandes */
+            text-align: center; /* Centra el texto dentro del botón */
+            border-radius: 15px; /* Bordes redondeados para los botones */
+        }
+
+        /* Estilos para cuando el mouse pasa por encima de los botones */
+        .navbar .boton:hover {
+            background-color: #5E2F46; /* Un color un poco más oscuro al pasar el mouse */
+        }

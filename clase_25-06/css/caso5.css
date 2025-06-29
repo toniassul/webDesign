@@ -1,0 +1,81 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+p {
+    font-family: "Pacifico", cursive; /* Aplica la fuente Lato a todos los párrafos */
+}
+/* Estilos generales */
+body {
+    display: flex;
+    justify-content: center; /* Centra los contenedores horizontalmente */
+    align-items: center;     /* Centra los contenedores verticalmente */
+    min-height: 100vh;       /* Ocupa al menos el 100% de la altura de la ventana */
+    margin: 0;
+    background-color: #f0f0f0; /* Un color de fondo claro */
+    font-family: sans-serif;
+}
+
+/* Contenedor padre para situar los div en horizontal */
+.container-wrapper {
+    display: flex; /* Utiliza Flexbox para colocar los divs en línea */
+    /* gap: 18px; /* Podrías usar gap para el espacio, pero el margin ya lo crea */
+}
+
+/* Estilos comunes para todos los divs (contenedor, div1, div2, div3) */
+.contenedor {
+    margin: 18px;             /* Margen de 18px en todas direcciones */
+    padding: 8px;             /* Relleno de 8px en todas direcciones */
+    width: 240px;             /* Ancho de 240 píxeles */
+    height: 300px;            /* Altura de 300 píxeles */
+    border: 3px solid blue;   /* Borde sólido de 3px azul */
+    overflow: hidden;         /* Oculta cualquier contenido que se desborde por defecto */
+    box-sizing: border-box;   /* Incluye padding y border en el width/height */
+    background-color: white;  /* Fondo blanco para los contenedores */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para un efecto 3D */
+}
+
+/* b) Estilos específicos para div1 */
+#div1 p {
+    /* El overflow: hidden ya está en .contenedor */
+    white-space: nowrap; /* Permite que el texto se ajuste (word wrap) */
+    overflow: hidden;    /* Asegura que el texto que se desborda sea recortado */
+    text-overflow: ellipsis; /* Añade los puntos suspensivos (...) al final */
+    line-height: 1.05;   /* Altura de línea 5% superior a lo normal (1 + 0.05 = 1.05) */
+    /* La altura de línea se aplica al párrafo dentro del div */
+}
+
+#div1 .highlight1 {
+    font-size: 18px;
+    /* Sombra sólida de color rojo con desplazamiento hacia la derecha y abajo */
+    text-shadow: 2px 2px 0 red; /* Desplazamiento X, Desplazamiento Y, radio de difuminado (0 para sólida), color */
+}
+
+/* c) Estilos específicos para div2 */
+#div2 p {
+    /* overflow: hidden; ya está en .contenedor */
+    white-space: normal; /* Permite que el texto se ajuste */
+    line-height: 1.10;   /* Altura de línea 10% superior a lo normal (1 + 0.10 = 1.10) */
+    /* text-overflow: ellipsis; NO se aplica para no mostrar puntos */
+}
+
+#div2 .highlight2 {
+    font-size: 18px;
+    /* Sombra sólida de color azul con desplazamiento hacia la izquierda y abajo */
+    text-shadow: -2px 2px 0 blue; /* Desplazamiento X (negativo para izquierda), Desplazamiento Y, radio de difuminado (0 para sólida), color */
+}
+
+/* d) Estilos específicos para div3 */
+#div3 p {
+    text-align: justify; /* Alineación del texto justificada */
+    color: #8B4513;      /* Color de texto #8B4513 (marrón claro) */
+    line-height: 1.20;   /* Altura de línea 20% superior a lo normal (1 + 0.20 = 1.20) */
+    /* overflow: hidden; ya está en .contenedor */
+    white-space: normal; /* Permite que el texto se ajuste */
+    /* text-overflow: ellipsis; NO se aplica para no mostrar puntos */
+}
+
+#div3 .highlight3 {
+    font-size: 18px;
+    /* Sombra con efecto de difuminado de color verde que parezca vapor */
+    text-shadow: 0 0 8px green; /* Desplazamiento X, Desplazamiento Y, radio de difuminado (para el efecto vapor), color */
+}

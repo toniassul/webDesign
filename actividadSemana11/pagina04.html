@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform : skew</title>
+    <style>
+        #recuadro1 {
+            border-radius: 20px;
+            background-color: #ddd;
+            width: 200px;
+            padding: 10px;
+            margin: 50px;
+        }
+        #recuadro2 {
+            transform: skew(-20deg, -10deg);
+            border-radius: 20px;
+            background-color: #aa0;
+            width: 200px;
+            padding: 10px;
+            margin-top: 70px;
+        }
+        body {
+            background: white;
+            margin: 50px;
+            background-image: url("https://imagenes.20minutos.es/files/image_990_556/uploads/imagenes/2025/06/30/scarlett-johansson.jpeg");
+            background-size: cover;
+        }
+        #recuadro1:hover {
+            transform: skew(20deg, 10deg);
+            transition: transform 0.3s ease-in-out;
+            background-image: url("https://imagenes.20minutos.es/files/image_990_556/uploads/imagenes/2025/06/30/scarlett-johansson.jpeg");
+            background-size: contain;
+        }
+        #recuadro2:hover {
+            transform: skewx(20deg) skewy(10deg);
+            transition: transform 0.3s ease-in-out;
+            opacity: 0.4;/* 0 a 1 */
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="recuadro1">
+        <h1>Recuadro 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sit possimus ab suscipit vero labore voluptatem minima esse quo atque? Praesentium corporis, modi iure molestiae temporibus eos nemo sequi odit!</p>
+    </div>
+    <div id="recuadro2">
+        <h1>Recuadro 2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sit possimus ab suscipit vero labore voluptatem minima esse quo atque? Praesentium corporis, modi iure molestiae temporibus eos nemo sequi odit!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        #recuadro1 {
+            margin: 5px;
+            border-radius: 20px;
+            background-color: #eee;
+            width: 200px;
+            padding: 10px;
+            transition: width 2s ease, background-color 2s ease-in-out;
+        }
+        #recuadro1:hover {
+            width: 300px;
+            background-color: #ffef09;
+        }
+        #recuadro1 p{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            transition: text-overflow 2s ease-in-out, white-space 2s ease-in-out, overflow 2s ease-in-out;
+        }
+        #recuadro1 p:hover {
+            text-overflow: initial;
+            white-space: initial;
+            overflow: visible;
+            clip-path: inset(0 0 0 0);
+        }
+        #recuadro2 {
+            margin: 5px;
+            border-radius: 20px;
+            background-color: #eee;
+            width: 200px;
+            padding: 10px;
+            transition: width 2s linear, background-color 2s linear;
+        }
+        #recuadro2:hover {
+            width: 300px;
+            background-color: #f112a7;
+        }
+        #recuadro3 {
+            margin: 5px;
+            border-radius: 20px;
+            background-color: #eee;
+            width: 200px;
+            padding: 10px;
+            transition: width 2s ease-in, background-color 2s ease-in;
+        }
+        #recuadro3:hover {
+            width: 300px;
+            background-color: #2600ff;
+        }
+        #recuadro4 {
+            margin: 5px;
+            border-radius: 20px;
+            background-color: #eee;
+            width: 200px;
+            padding: 10px;
+            transition: width 2s ease-out, background-color 2s ease-out;
+        }
+        #recuadro4:hover {
+            width: 300px;
+            background-color: #08ee70;
+        }
+        #recuadro5 {
+            margin: 5px;
+            border-radius: 20px;
+            background-color: #eee;
+            width: 200px;
+            padding: 10px;
+            transition: width 2s ease-in-out, background-color 2s ease-in-out;
+        }
+        #recuadro5:hover {
+            width: 300px;
+            background-color: #f10000;
+        }
+        body {
+            background-color: #ffffff;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="recuadro1">
+        <h3>ease</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero magni ut repellendus sunt dolore in ipsum, inventore minus quaerat delectus ipsam aperiam, quisquam blanditiis at magnam! Necessitatibus deserunt similique quis?</p>
+    </div>
+    <div id="recuadro2">
+        <h3>linear</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero magni ut repellendus sunt dolore in ipsum, inventore minus quaerat delectus ipsam aperiam, quisquam blanditiis at magnam! Necessitatibus deserunt similique quis?</p>
+    </div>
+    <div id="recuadro3">
+        <h3>ease-in</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero magni ut repellendus sunt dolore in ipsum, inventore minus quaerat delectus ipsam aperiam, quisquam blanditiis at magnam! Necessitatibus deserunt similique quis?</p>
+    </div>
+    <div id="recuadro4">
+        <h3>ease-out</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero magni ut repellendus sunt dolore in ipsum, inventore minus quaerat delectus ipsam aperiam, quisquam blanditiis at magnam! Necessitatibus deserunt similique quis?</p>
+    </div>
+    <div id="recuadro5">
+        <h3>ease-in-out</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero magni ut repellendus sunt dolore in ipsum, inventore minus quaerat delectus ipsam aperiam, quisquam blanditiis at magnam! Necessitatibus deserunt similique quis?</p>
+    </div>
+    
+</body>
+</html>

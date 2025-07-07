@@ -1,0 +1,42 @@
+@font-face{
+font-family:inder;
+src: url(../fuente/Inder-Regular.ttf) format('truetype');
+}
+@font-face{
+font-family:alegreya_bold;
+src: url(../fuente/Alegreya-Bold.ttf) format('truetype');
+}
+@font-face{
+font-family:alegreya_medium;
+src: url(../fuente/Alegreya-Medium.ttf) format('truetype');
+}
+header{
+font-family:alegreya_medium;
+font-size:24px;
+color:white;
+}
+section{
+font-family:inder;
+font-size:12px;
+}
+nav{
+font-family:alegreya-bold;
+color:silver;
+font-size:25px;
+}
+nav li{
+list-style:none;
+display:inline-block;
+padding:4px 70px;
+text-align:center;
+}
+footer{
+font-family:alegreya_medium;
+font-size:13px;
+color:silver;
+}
+#titulo{
+font-family:alegreya_medium;
+font-size:18px;
+margin-top:47px;
+}

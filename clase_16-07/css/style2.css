@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 2rem;
+    font-size: 2rem;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+}
+h1{
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+}
+div{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.261);
+    border-radius: 5px;
+}
+
+.static,.relative,.absolute,.fixed,.sticky{
+    padding: 1rem;;
+}
+.parent{
+    background-color: #555555;
+
+}
+.static{
+    background-color: #ff0000;
+}
+.relative{
+    background-color: #00ff00;
+}
+.absolute{
+    background-color: #0000ff;
+}
+.fixed{
+    background-color: #ffff00;
+}
+.sticky{
+    background-color: #ff00ff;
+}
+
+/*CSS Positions*/
+.static{
+    position: static;
+}
+.relative{
+    position: relative;
+    top:10px;
+    bottom:0;
+    left:10px;
+    right:20px;
+}
+.parent{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+body{
+    position: fixed;
+    top:50%;
+}
+.sticky{
+    position: sticky;
+    top: 0;
+}
+.scroll{
+    height: 200px;
+    overflow:scroll;    
+    height: 250px;
+}

@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*lo que hace es calcular el ancho y alto de una caja*/
+
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.caja_padre{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.caja_hijo{
+    width: 160px;
+    height: 200px;
+    margin: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.flotar_izquierda{
+    float: left;
+}
+
+.flotar_derecha{
+    float: right;
+}
+.restaura{
+    clear: both;
+}

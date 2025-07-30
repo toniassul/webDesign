@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Final</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icons/iconColorSiluet32.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logoEmpresa">
+            <h1>Do&Go</h1>
+            <img src="img/logo512.png" alt="Logo de la empresa" id="logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="hombres.html">Hombres</a></li>
+            <li><a href="mujeres.html">Mujeres</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+
+        </ul>
+    </header>
+    <section id="banner">
+        <div class="slider">
+            <img src="img/banner/img4.webp" alt="Banner 1" class="slide active">
+            <img src="img/banner/img7_mujer_portada.jpg" alt="Banner 2" class="slide">
+            <img src="img/banner/img2.webp" alt="Banner 3" class="slide">
+            <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+            <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
+        </div>
+    </section>
+
+
+    <section id="video-section">
+        <div class="video-container">
+            <h2>Nuestra Historia</h2>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/frX8GujpmkI" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <section id="productos">
+        <div id="encabezadoProductos">
+            <h2>Do&Go</h2>
+            <p>Descubre nuestra amplia gama de productos diseñados para ti.</p>
+        </div>
+        <article id="modelos">
+            <div class="producto">
+                <img src="img/modelos/modelo1.webp" alt="Producto 1">
+                <p>Precio: $100.00</p>
+            </div>
+            <div class="producto">
+                <img src="img/modelos/modelo2.webp" alt="Producto 2">
+                <p>Precio: $150.00</p>
+            </div>
+            <div class="producto">
+                <img src="img/modelos/modelo3.webp" alt="Producto 3">
+                <p>Precio: $200.00</p>
+            </div>
+            <div class="producto">
+                <img src="img/modelos/modelo4.webp" alt="Producto 4">
+                <p>Precio: $250.00</p>
+            </div>
+            <div class="producto">
+                <img src="img/modelos/modelo5.webp" alt="Producto 5">
+                <p>Precio: $300.00</p>
+            </div>
+            <div class="producto">
+                <img src="img/modelos/modelo6.webp" alt="Producto 6">
+                <p>Precio: $350.00</p>
+            </div>
+            <div id="rectificador"></div>
+        </article>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <section id="footerEmpresa">
+                <h3>Síguenos en</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+                </ul>
+            </section>
+            <section id="footerCliente">
+                <div id="servicioCliente">
+                    <h3>Servicio al Cliente</h3>
+                    <ul>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                        <li><a href="politica.html">Política de Privacidad</a></li>
+                        <li><a href="terminos.html">Términos y Condiciones</a></li>
+                        <li><a href="devoluciones.html">Política de Devoluciones</a></li>
+                        <li><a href="cookies.html">Política de Cookies</a></li>
+                        <li><a href="reclamaciones.html">Libro de reclamaciones</a></li>
+                    </ul>
+                </div>
+                <div id="contactoEmpresa">
+                    <h3>Información de la Empresa</h3>
+                    <ul>
+                        <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="trabajaConNosotros.html">Trabaja con Nosotros</a></li>
+                        <li><a href="localizacion.html">Localización</a></li>
+                        <li><a href="historia.html">Historia</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+        // Cambio automático de slides cada 5 segundos
+        setInterval(() => changeSlide(1), 5000);
+    </script>
+    
+    <div id="audio-player">
+        <audio controls autoplay >
+            <source src="multimedia/melodia.wav" type="audio/mp3" ">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+</body>
+</html>
